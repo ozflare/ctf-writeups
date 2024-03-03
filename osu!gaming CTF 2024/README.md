@@ -4,16 +4,16 @@
 
 ## Challenges
 
-- (pwn)[#pwn]
-    - (miss-analyzer)[#miss-analyzer]
-    - (betterthanu)[#betterthanu]
-- (reverse)[#reverse]
-    - (SAT-before-osu)[#SAT-before-osu]
-- (crypto)[#crypto]
-    - (ROSSAU)[#ROSSAU]
-    - (base727)[#base727]
-- (web)[#web]
-    - (mikufanpage)[#mikufanpage]
+- [pwn](#pwn)
+    - [miss-analyzer](#miss-analyzer)
+    - [betterthanu](#betterthanu)
+- [reverse](#reverse)
+    - [SAT-before-osu](#SAT-before-osu)
+- [crypto](#crypto)
+    - [ROSSAU](#ROSSAU)
+    - [base727](#base727)
+- [web](#web)
+    - [mikufanpage](#mikufanpage)
 
 ## pwn
 
