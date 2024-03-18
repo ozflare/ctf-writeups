@@ -1,23 +1,23 @@
-# osu!gaming CTF 2024
+# WolvCTF 2024
 
 - Fri, 15 March 2024, 23:00 UTC — Sun, 17 March 2024, 23:00 UTC
 
 ## Challenges
 
 - [pwn](#pwn)
-    - [DeepString](#DeepString)
-    - [byteOverflow.com](#byteOverflow.com)
+    - [DeepString](#deepstring)
+    - [byteOverflow.com](#byteoverflowcom)
     - [shelleater](#shelleater)
     - [babypwn2](#babypwn2)
     - [babypwn](#babypwnn)
 - [rev](#rev)
-    - [Shredded](#Shredded)
-    - [doubledelete's revenge](#doubledelete's%20revenge)
+    - [Shredded](#shredded)
+    - [doubledelete's revenge](#doubledeletes-revenge)
 - [crypto](#crypto)
-    - [TwoTimePad](#TwoTimePad)
-    - [yORs Truly <3](#yORs%20Truly%20%3C3)
+    - [TwoTimePad](#twotimepad)
+    - [yORs Truly <3](#yors-truly-3)
 - [web](#web)
-    - [The Gauntlet](#The%20Gauntlet)
+    - [The Gauntlet](#the-gauntlet)
 
 ## pwn
 
