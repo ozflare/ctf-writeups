@@ -1,4 +1,4 @@
-# WolvCTF 2024
+# cr3 CTF 2024
 
 - Fri, 26 April 2024, 13:00 UTC — Sun, 28 April 2024, 01:00 UTC
 
