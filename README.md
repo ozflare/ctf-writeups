@@ -20,3 +20,4 @@
 ## Jun
 
 - [N0PSctf](/N0PSctf)
+- [vsCTF 2024](/vsCTF%202024)
