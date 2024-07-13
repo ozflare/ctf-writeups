@@ -11,7 +11,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath('/ctf-archive/UMassCTF 2024/pwn/bench-225/bench-225')
+TARGET = os.path.realpath('/ctf-writeups/UMassCTF 2024/pwn/bench-225/bench-225')
 elf = ELF(TARGET)
 libc = ELF('/lib/x86_64-linux-gnu/libc.so.6')
 

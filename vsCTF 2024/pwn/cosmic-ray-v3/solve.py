@@ -12,7 +12,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath('/ctf-archive/vsCTF 2024/pwn/cosmic-ray-v3/cosmicrayv3')
+TARGET = os.path.realpath('/ctf-writeups/vsCTF 2024/pwn/cosmic-ray-v3/cosmicrayv3')
 elf = ELF(TARGET)
 
 def attach(r):

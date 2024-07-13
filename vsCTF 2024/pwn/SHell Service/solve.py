@@ -14,7 +14,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath('/ctf-archive/vsCTF 2024/pwn/SHell Service/shs')
+TARGET = os.path.realpath('/ctf-writeups/vsCTF 2024/pwn/SHell Service/shs')
 elf = ELF(TARGET)
 password = b''
 

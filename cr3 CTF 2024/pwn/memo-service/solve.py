@@ -12,7 +12,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath('/ctf-archive/cr3 CTF 2024/pwn/memo-service/chal')
+TARGET = os.path.realpath('/ctf-writeups/cr3 CTF 2024/pwn/memo-service/chal')
 elf = ELF(TARGET)
 
 def attach(r):

@@ -11,7 +11,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath("/ctf-archive/Space Heroes 2024/pwn/Falling In ROP/falling.bin")
+TARGET = os.path.realpath("/ctf-writeups/Space Heroes 2024/pwn/Falling In ROP/falling.bin")
 elf = ELF(TARGET)
 
 def attach(r):
