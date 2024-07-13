@@ -12,7 +12,7 @@ context.update(
 )
 
 REMOTE = False
-TARGET = os.path.realpath('/ctf-archive/pwn/Raiser/raiser')
+TARGET = os.path.realpath('/ctf-writeups/pwn/Raiser/raiser')
 elf = ELF(TARGET)
 libc = ELF('./libc.so.6')
 
