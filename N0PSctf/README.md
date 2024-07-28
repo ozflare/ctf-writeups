@@ -25,14 +25,6 @@
 
 > ``` Use Raiser Instance for this challenge. ```
 
-> ``` if you are using pwntools: ```
-
-```python
-from pwn import *
-
-remote("demo-challenge.chals.io", 443, ssl=True, sni="demo-challenge.chals.io")
-```
-
 ## web
 
 ### XSS Lab
@@ -40,8 +32,6 @@ remote("demo-challenge.chals.io", 443, ssl=True, sni="demo-challenge.chals.io")
 - 93 solves / 120 points
 
 > ``` xss, EVERYWHERE ```
-
-> ``` Note : If your payload does not seem to work at first, please use RequestBin to check before contacting the support. ```
 
 ### Outsiders
 

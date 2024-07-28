@@ -59,8 +59,6 @@
 
 > ``` We encoded a flag, and to make sure that pesky interlopers couldn't reverse it, we shredded the encoding code. ```
 
-> ``` Note: The encoder was written in C. The code is written with good style, but all indents have been removed. ```
-
 ### doubledelete's revenge
 
 - 105 solves / 100 points
@@ -90,5 +88,3 @@
 > ``` Can you survive the gauntlet? ```
 
 > ``` 10 mini web challenges are all that stand between you and the flag. ```
-
-> ``` Note: Automated tools like sqlmap and dirbuster are not allowed (and will not be helpful anyway). ```
