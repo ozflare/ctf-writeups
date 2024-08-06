@@ -22,6 +22,10 @@
 - [N0PSctf](/N0PSctf/)
 - [vsCTF 2024](/vsCTF%202024/)
 
-## July
+## Jul
 
 - [DeadSec CTF 2024](/DeadSec%20CTF%202024/)
+
+## Aug
+
+- [n00bzCTF 2024](/n00bzCTF%202024/)
