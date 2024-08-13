@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 flag = [''] * 24
 
 flag[1] = 'N'

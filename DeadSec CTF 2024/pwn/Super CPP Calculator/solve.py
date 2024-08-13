@@ -20,7 +20,7 @@ def attach(r):
     if REMOTE:
         return
 
-    bkps = ['*0x401896']
+    bkps = []
     cmds = []
 
     gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))

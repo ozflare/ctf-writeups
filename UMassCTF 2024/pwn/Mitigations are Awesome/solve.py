@@ -15,12 +15,13 @@ TARGET = os.path.realpath('/ctf-writeups/UMassCTF 2024/pwn/Mitigations are Aweso
 elf = ELF(TARGET)
 
 def attach(r):
-    if not REMOTE:
-        bkps = ['*motivation+814']
-        cmds = []
+    if REMOTE:
+        return
 
-        gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
-    return
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)

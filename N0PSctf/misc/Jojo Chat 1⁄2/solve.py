@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pwn import *
 
 p = remote('nopsctf-4cadaab63f67-jojo_chat_v1-0.chals.io', 443, ssl=True)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import z3
 
 a = z3.Int('a')

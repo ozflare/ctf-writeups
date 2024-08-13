@@ -10,7 +10,6 @@
 - [crypto](#crypto)
     - [ᒣ⍑╎ϟ ╎ϟ リᒷᖋᒣ ](#ᒣϟ-ϟ-リᒷᖋᒣ)
 - [forensics](#forensics)
-    - [A Window into Space](#a-window-into-space)
     - [Petey the Panther's Guide to the Galaxy](#petey-the-panthers-guide-to-the-galaxy)
 - [web](#web)
     - [antikythera](#antikythera)
@@ -42,12 +41,6 @@
 > ``` Can you decrypt the message? ```
 
 ## forensics
-
-### A Window into Space
-
-- 100 points
-
-> ``` I think aliens are testing us again and they they are poking fun at our internet protocols by using them in close proximity to earth. We were able to intercept something but I cant figure out what it is. Take a crack at it for me. ```
 
 ### Petey the Panther's Guide to the Galaxy
 

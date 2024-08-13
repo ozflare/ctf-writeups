@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import base64
 
 ciphertext_decoded = base64.b64decode("NkMHEgkxXjV/BlN/ElUKMVZQEzFtGzpsVTgGDw==")

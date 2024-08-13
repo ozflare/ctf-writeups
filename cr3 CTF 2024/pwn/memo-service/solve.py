@@ -16,12 +16,13 @@ TARGET = os.path.realpath('/ctf-writeups/cr3 CTF 2024/pwn/memo-service/chal')
 elf = ELF(TARGET)
 
 def attach(r):
-    if not REMOTE:
-        bkps = ['*main+546']
-        cmds = []
+    if REMOTE:
+        return
 
-        gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
-    return
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)

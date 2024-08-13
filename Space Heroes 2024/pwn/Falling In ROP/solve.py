@@ -3,24 +3,25 @@ import sys, os
 from pwn import *
 
 context.update(
-    arch="amd64",
-    endian="little",
-    os="linux",
-    log_level="debug",
-    terminal=["tmux", "split-window", "-h", "-p 65"],
+    arch='amd64',
+    endian='little',
+    os='linux',
+    log_level='debug',
+    terminal=['tmux', 'split-window', '-h', '-p 65'],
 )
 
 REMOTE = False
-TARGET = os.path.realpath("/ctf-writeups/Space Heroes 2024/pwn/Falling In ROP/falling.bin")
+TARGET = os.path.realpath('/ctf-writeups/Space Heroes 2024/pwn/Falling In ROP/falling.bin')
 elf = ELF(TARGET)
 
 def attach(r):
-    if not REMOTE:
-        bkps = ['*vuln+91']
-        cmds = []
+    if REMOTE:
+        return
 
-        gdb.attach(r, '\n'.join(["break {}".format(x) for x in bkps] + cmds))
-    return
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)
@@ -38,10 +39,10 @@ def exploit(r):
     r.interactive()
     return
 
-if __name__ == "__main__":
-    if len(sys.argv)==2 and sys.argv[1]=="remote":
+if __name__ == '__main__':
+    if len(sys.argv) == 2 and sys.argv[1] == 'remote':
         REMOTE = True
-        r = remote("spaceheroes-falling-in-rop.chals.io", 443, ssl=True, sni="spaceheroes-falling-in-rop.chals.io")
+        r = remote('spaceheroes-falling-in-rop.chals.io', 443, ssl=True, sni='spaceheroes-falling-in-rop.chals.io')
     else:
         REMOTE = False
         r = process([TARGET,])

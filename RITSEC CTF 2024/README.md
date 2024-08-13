@@ -6,9 +6,6 @@
 
 - [pwn](#pwn)
     - [The Gumponent](#the-gumponent)
-- [rev](#rev)
-    - [Guess](#guess)
-    - [My Favorite Flag](#my-favorite-flag)
 - [forensics](#forensics)
     - [Decrypt the Flood](#decrypt-the-flood)
 
@@ -21,20 +18,6 @@
 > ``` Hey, Chase here. Some of us on the team think we've found a component of something Anthony was last working on. Its seen running on a server. ```
 
 > ``` Additionally, someone found a prototype. Do you can you dig into this and see if there is something on the server that could tell use more? ```
-
-## rev
-
-### Guess
-
-- 90 solves / 100 points
-
-> ``` I was rummaging around some old files and found this badly made app (not mine by the way). Do you think you can uncover any hidden information hiding in when running it? You can download it here(guess.apk). ```
-
-### My Favorite Flag
-
-- 136 solves / 100 points
-
-> ``` In our relentless quest to reclaim Anthony's cherished invention, we find ourselves navigating the intricate pathways of cyber investigation. Our attention is drawn to a digital artifact, the a.out file, a seemingly innocuous entity yet harboring secrets within its binary code. With Anthony's invention at stake, suspicions now converge not only upon Sophie, a figure of authority with a nuanced understanding of the facility's inner workings, but also upon Alex, a shadowy presence lurking within the digital ether. ```
 
 ## forensics
 
