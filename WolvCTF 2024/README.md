@@ -12,7 +12,6 @@
     - [babypwn](#babypwnn)
 - [rev](#rev)
     - [Shredded](#shredded)
-    - [doubledelete's revenge](#doubledeletes-revenge)
 - [crypto](#crypto)
     - [TwoTimePad](#twotimepad)
     - [yORs Truly <3](#yors-truly-3)
@@ -58,12 +57,6 @@
 - 66 solves / 50 points
 
 > ``` We encoded a flag, and to make sure that pesky interlopers couldn't reverse it, we shredded the encoding code. ```
-
-### doubledelete's revenge
-
-- 105 solves / 100 points
-
-> ``` The notorious WOLPHV group has re-emerged and doubledelete is now ransoming us for our flags! Can you help us so we don't have to pay them? ```
 
 ## crypto
 

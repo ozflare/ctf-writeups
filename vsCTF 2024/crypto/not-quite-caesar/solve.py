@@ -16,5 +16,5 @@ with open('out.txt', 'r') as f:
 
     for c in ct:
         flag.append(chr(random.choice(ops)(c)))
-    
+
     print(''.join(flag))

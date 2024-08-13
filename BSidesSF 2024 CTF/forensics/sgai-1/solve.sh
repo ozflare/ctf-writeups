@@ -1,1 +1,0 @@
-strings sgai.sgi | egrep "CTF{.+}"

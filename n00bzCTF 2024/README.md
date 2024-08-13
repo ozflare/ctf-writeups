@@ -39,7 +39,6 @@
 
 > ``` Tired of storing passwords? No worries! This super secure website is passwordless! Author: NoobMaster ```
 
-
 ## misc
 
 ### Agree
@@ -53,7 +52,6 @@
 - 501 solves / 100 points
 
 > ``` My little brother is learning math, can you show him how to do some addition problems? Author: Connor Chang ```
-
 
 ## programming
 

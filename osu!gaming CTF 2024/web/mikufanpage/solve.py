@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests
 
 req = requests.get('https://mikufanpage.web.osugaming.lol/image',

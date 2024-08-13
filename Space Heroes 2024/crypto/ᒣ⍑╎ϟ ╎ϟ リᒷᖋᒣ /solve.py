@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from Crypto.Cipher import AES
 import binascii, os
 

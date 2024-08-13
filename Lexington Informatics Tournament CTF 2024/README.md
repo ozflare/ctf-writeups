@@ -12,10 +12,10 @@
     - [kirbytime](#kirbytime)
     - [traversed](#traversed)
     - [anti-inspect](#anti-inspect)
-- [crypto](#crypto)
-    - [simple otp](#simple-otp)
 - [rev](#rev)
     - [forgotten message](#forgotten-message)
+- [crypto](#crypto)
+    - [simple otp](#simple-otp)
 
 ## pwn
 

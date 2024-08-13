@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pwn import *
 import struct
 
@@ -8,7 +9,7 @@ for i in range(4, 18):
 
     for j in range(20):
         r.sendlineafter(b':\n', b'-' if i == j else b'0')
-    
+
     r.recvuntil(b'is ')
     flag += struct.pack('i', int(float(r.recvline()[:-2].decode()) * 20))
 

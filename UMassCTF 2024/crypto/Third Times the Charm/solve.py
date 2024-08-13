@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from Crypto.Util.number import *
 from pwn import *
 import gmpy2

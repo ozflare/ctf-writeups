@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import zipfile
 
 archive = zipfile.ZipFile('SuperSecretWordDoc.docx')

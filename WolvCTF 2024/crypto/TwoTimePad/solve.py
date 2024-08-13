@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from Crypto.Random import random, get_random_bytes
 
 BLOCK_SIZE = 16

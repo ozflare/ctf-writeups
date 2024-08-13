@@ -10,10 +10,8 @@
 - [misc](#misc)
     - [crossworthy](#crossworthy)
 - [forensics](#forensics)
-    - [undelete](#undelete)
     - [javai](#javai)
     - [ztxt](#ztxt)
-    - [sgai-3](#sgai-3)
     - [sgai-1](#sgai-1)
     - [doctor](#doctor)
 - [web](#web)
@@ -48,12 +46,6 @@
 
 ## forensics
 
-### undelete
-
-- 148 solves / 100 points
-
-> ``` Try out this file 'undelete' challenge! It comes with a walkthrough :-) ```
-
 ### javai
 
 - 164 solves / 100 points
@@ -65,12 +57,6 @@
 - 180 solves / 100 points
 
 > ``` Ze zhope zou zan zind zour zlag zin ztext zhunk ```
-
-### sgai-3
-
-- 190 solves / 100 points
-
-> ``` This image from the past may hold the key to our future survival if you can find the hidden flag! (This is flag 3 of 4) ```
 
 ### sgai-1
 
