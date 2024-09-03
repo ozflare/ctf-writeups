@@ -30,3 +30,4 @@
 
 - [n00bzCTF 2024](/n00bzCTF%202024/)
 - [Lexington Informatics Tournament CTF 2024](/Lexington%20Informatics%20Tournament%20CTF%202024/)
+- [CyberSpace CTF 2024](/CyberSpace%20CTF%202024/)
