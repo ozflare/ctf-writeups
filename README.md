@@ -35,3 +35,4 @@
 ## Sep
 
 - [CSAW CTF Qualification Round 2024](/CSAW%20CTF%20Qualification%20Round%202024/)
+- [PatriotCTF 2024](/PatriotCTF%202024/)
