@@ -1,4 +1,4 @@
-# Space Heroes 2024
+# SunshineCTF 2024
 
 - Sat, 19 Oct. 2024, 14:00 UTC — Mon, 21 Oct. 2024, 14:00 UTC
 
