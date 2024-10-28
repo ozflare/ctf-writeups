@@ -40,3 +40,4 @@
 ## Oct
 
 - [SunshineCTF 2024](/SunshineCTF%202024/)
+- [SpookyCTF 2024](/SpookyCTF%202024/)

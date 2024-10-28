@@ -1,0 +1,74 @@
+
+        body {
+            background-image: url("./background.png");
+            background-color: #000000;
+            font-family: "Comic Sans MS", sans-serif;
+            height: 180vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            color: #3d3c3c;
+        }
+
+        h1 {
+            color: #103d03;
+            text-shadow: 2px 2px 2px #000000;
+        }
+
+        .btn-primary {
+            background-color: #216d0d;
+            border-color: #103d03;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 1px 1px #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #103d03;
+            border-color: #103d03;
+        }
+
+        input[type="url"] {
+            border: 3px solid #103d03;
+            padding: 10px;
+            background-color: #FFFFE0;
+        }
+
+        .container {
+            border: 5px solid #103d03;
+            background-color: #000000;
+            padding: 20px;
+            min-height: 550px; /* Makes the container larger */
+            flex-grow: 2; /* Allows the container to take remaining space */
+        }
+
+        .containerMonster{
+          display: flex;
+          align-items: center;
+        }
+
+        .alert-danger {
+            background-color: #FF0000;
+            color: #FFF;
+            border: 2px solid black;
+        }
+        /* Make the iframe fit inside the container */
+        iframe {
+            width: 100%; /* Full width */
+            height: fill; /* Full height of the container */
+            min-height: 500px;
+            border: none; /* Remove default iframe border */
+        }
+
+        .img-size{
+          width: 200px;
+          height: auto;
+          margin-left: 20px;
+        }
+
+        #result {
+            height: 100%; /* Ensures the iframe uses full container space */
+           /* max-height: calc(70vh - 40px); /* Adjust height to fit within the container */
+            margin-top: 20px;
+        }
