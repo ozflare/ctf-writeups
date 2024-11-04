@@ -41,3 +41,7 @@
 
 - [SunshineCTF 2024](/SunshineCTF%202024/)
 - [SpookyCTF 2024](/SpookyCTF%202024/)
+
+## Nov
+
+- [Hack The Vote 2024](/Hack%20The%20Vote%202024/)
