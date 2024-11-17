@@ -46,3 +46,4 @@
 
 - [Hack The Vote 2024](/Hack%20The%20Vote%202024/)
 - [4T$ CTF](/4T$%20CTF/)
+- [PwnSec CTF 2024](/PwnSec%20CTF%202024/)
